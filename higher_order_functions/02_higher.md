@@ -92,3 +92,24 @@
     }
 
     sum([1,2,3,4]); // 10
+
+
+
+!SLIDE execute
+# zip
+
+    @@@ javaScript
+    function zip(arr1, arr2, binaryFunc) {
+      if (!binaryFunc)
+        binaryFunc = function(a, b) {
+          return [a, b];};
+      var len = Math.min(arr1.length, arr2.length);
+      var list = [];
+      for (var i=0; i < len; i++) {
+        list.push(binaryFunc(arr1[i], arr2[i]));
+      }
+      return list;
+    }
+
+    result = zip([1,2,3], [9, 10], function(a,b) {return a+b});
+
