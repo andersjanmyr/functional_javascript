@@ -1,0 +1,14 @@
+Functional Programming
+A priest fell into a hole...
+First class objects
+Simple functions
+Action
+Predicate
+BinaryFuncion
+each
+map
+filter
+reduce
+zip
+memoize
+module

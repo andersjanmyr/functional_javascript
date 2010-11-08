@@ -1,0 +1,8 @@
+{ "name": "Higher Order Javascript",
+  "sections": [
+    {"section":"intro"},
+    {"section":"higher_order_functions"},
+    {"section":"composition_functions"},
+    {"section":"summary"}
+  ]
+}
