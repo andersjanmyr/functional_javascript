@@ -1,7 +1,7 @@
 !SLIDE execute
 # Y Combinator, Scheme
 
-    @@@ Clojure
+    @@@ python
     (define Y
       (lambda (X)
         ((lambda (procedure)

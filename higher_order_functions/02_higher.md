@@ -17,7 +17,7 @@
 !SLIDE execute
 # filter
 
-    @@@ javaScript
+    @@@ javascript
     // Arguments, an array to iterate over,
     // an predicate to apply to each item
     // returns a new array with the
