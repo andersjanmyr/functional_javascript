@@ -5,20 +5,21 @@
 ### @andersjanmyr
 
 !SLIDE center
-![Netscape](netscape.jpg)
-## Netscape 1995
+![Netscape 1995](netscape.png)
+
 .notes The Wild West of the Internet
 
 !SLIDE center
 ![Brendan Eich](brendan_eich.jpg)
 ## Brendan Eich
+
 .notes Supremely smart fellow, make a programming language for browser, steals code
 
 
 !SLIDE
 # Scheme
 
-    @@@scheme
+    @@@python
     (define map
       (lambda (list f)
         (if (null? list)
@@ -26,40 +27,43 @@
           (cons (f (car list))
             (map (cdr list) f)))))
 
-!SLIDE
+!SLIDE center
 # George Bush Jr.
 ![GBJ](george_bush_jr.jpg)
+
 .notes Visited from Texas to invest some oil money in this new hype
 called the internet. 
 
-!SLIDE
+!SLIDE center
 # George Bush Sr.
-![GBS](george_bush_sr.jpg)
+![GBS](george_bush_sr.png)
+
 .notes Head of the CIA, at the time. 
 
-!SLIDE
+!SLIDE center
 # The Bushes
 ![Bushes](the_bushes.jpg)
+
 .notes Daddy, daddy, there is this german dude, that is trying to put
 a foreign programming language into an american browser.
 How do you know its not american?
 It has these weird sounding names in it, LAMBDA and stuff.
 We can't have that!
 
-!SLIDE
+!SLIDE center
 # George Makes some Calls
 ![george_calls](george_calls.jpg)
 
 
 !SLIDE center
-![Brendan Eich](brendan_eich.jpg)
+![Brendan Eich](brendan_eich2.jpg)
 ## Brendan Eich
 .notes Pissed off, but what can he do?
 
 !SLIDE
 # Scheme
 
-    @@@scheme
+    @@@python
     (define map
       (lambda (list f)
         (if (null? list)
@@ -71,7 +75,7 @@ We can't have that!
 !SLIDE
 # SchemaScript
 
-    @@@scheme
+    @@@python
     (define map
       (function (list f)
         (if (null? list)
@@ -79,9 +83,10 @@ We can't have that!
           (cons (f (car list))
             (map (cdr list) f)))))
 
-!SLIDE
+!SLIDE center
 # The Bushes
-![Bushes](the_bushes.jpg)
+![Bushes](the_bushes2.jpg)
+
 .notes Daddy, daddy, all he did was change the name, he's mocking me!
 Big George goes, Look here fellow, you better change it some more or
 we'll deport your ass!
@@ -89,7 +94,7 @@ we'll deport your ass!
 !SLIDE
 # SchemaScript
 
-    @@@scheme
+    @@@python
     (define map
       (function (list f)
         (if (null? list)
@@ -106,7 +111,7 @@ we'll deport your ass!
         if (!list) {
           return [];
         } else {
-          var car = list.shift(); // mutates the list
+          var car = list.shift();
           return map(list, f).unshift(f(car));
         }
 
