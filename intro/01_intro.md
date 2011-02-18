@@ -1,13 +1,116 @@
 !SLIDE
-# Higher Order Javascript
+# Functional Javascript
 ### anders.janmyr@jayway.com
 ### http://anders.janmyr.com
 ### @andersjanmyr
 
 !SLIDE center
-![Well](well.jpg)
-.notes A priest fell into a well, but managed to grab hold of a small root an the way down. He started to scream, "Hello, is there anybody up there?". Nothing happened! He screamed again "Hello, is there anybody up there?", Suddenly a sound of thunder came from the clouds above the well. "This is your God speaking, let go of the root and I will save you!" A brief silence then the priest screamed, "Is there anybody else up there?"
-.notes Whether you like Javascript or not does not have anything to do with rational thinking, it is a lot closer to religion than that. My point with this presentation is to show you why I love Javascript, with the hope, that you will come to love it too.
+![Netscape](netscape.jpg)
+## Netscape 1995
+.notes The Wild West of the Internet
+
+!SLIDE center
+![Brendan Eich](brendan_eich.jpg)
+## Brendan Eich
+.notes Supremely smart fellow, make a programming language for browser, steals code
+
+
+!SLIDE
+# Scheme
+
+    @@@scheme
+    (define map
+      (lambda (list f)
+        (if (null? list)
+          nil
+          (cons (f (car list))
+            (map (cdr list) f)))))
+
+!SLIDE
+# George Bush Jr.
+![GBJ](george_bush_jr.jpg)
+.notes Visited from Texas to invest some oil money in this new hype
+called the internet. 
+
+!SLIDE
+# George Bush Sr.
+![GBS](george_bush_sr.jpg)
+.notes Head of the CIA, at the time. 
+
+!SLIDE
+# The Bushes
+![Bushes](the_bushes.jpg)
+.notes Daddy, daddy, there is this german dude, that is trying to put
+a foreign programming language into an american browser.
+How do you know its not american?
+It has these weird sounding names in it, LAMBDA and stuff.
+We can't have that!
+
+!SLIDE
+# George Makes some Calls
+![george_calls](george_calls.jpg)
+
+
+!SLIDE center
+![Brendan Eich](brendan_eich.jpg)
+## Brendan Eich
+.notes Pissed off, but what can he do?
+
+!SLIDE
+# Scheme
+
+    @@@scheme
+    (define map
+      (lambda (list f)
+        (if (null? list)
+          nil
+          (cons (f (car list))
+            (map (cdr list) f)))))
+
+
+!SLIDE
+# SchemaScript
+
+    @@@scheme
+    (define map
+      (function (list f)
+        (if (null? list)
+          nil
+          (cons (f (car list))
+            (map (cdr list) f)))))
+
+!SLIDE
+# The Bushes
+![Bushes](the_bushes.jpg)
+.notes Daddy, daddy, all he did was change the name, he's mocking me!
+Big George goes, Look here fellow, you better change it some more or
+we'll deport your ass!
+
+!SLIDE
+# SchemaScript
+
+    @@@scheme
+    (define map
+      (function (list f)
+        (if (null? list)
+          nil
+          (cons (f (car list))
+            (map (cdr list) f)))))
+
+!SLIDE
+# JavaScript
+
+    @@@javascript
+    var map =
+      function(list, f) {
+        if (!list) {
+          return [];
+        } else {
+          var car = list.shift(); // mutates the list
+          return map(list, f).unshift(f(car));
+        }
+
+
 
 !SLIDE bullets
 # First Class Functions

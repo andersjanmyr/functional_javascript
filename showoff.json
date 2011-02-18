@@ -1,4 +1,4 @@
-{ "name": "Higher Order Javascript",
+{ "name": "Functional Javascript",
   "sections": [
     {"section":"intro"},
     {"section":"higher_order_functions"},
