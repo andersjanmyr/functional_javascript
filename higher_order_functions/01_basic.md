@@ -1,3 +1,36 @@
+!SLIDE center
+# Javascript
+
+!SLIDE bullets
+# First Class Functions
+
+* Created during execution
+* Stored in data structures
+* Passed as arguments
+* Returned as values from functions
+
+!SLIDE
+# function operator
+
+    @@@ javascript
+    var f = function sum(arg1, arg2) {
+      return arg1 + arg2;
+    }
+
+!SLIDE
+# function statement
+
+    @@@ javascript
+    // Statement
+    function sum(arg1, arg2) {
+      return arg1 + arg2;
+    }
+
+    // Rougly equivalent to
+    var sum = function(arg1, arg2) {
+      return arg1 + arg2;
+    }
+
 !SLIDE
 # Basic Functions
 

@@ -113,3 +113,16 @@
 
     result = zip([1,2,3], [9, 10], function(a,b) {return a+b});
 
+
+!SLIDE center
+# Tail Recursion
+
+!SLIDE center
+# Tail Recursion
+![Bushes](the_bushes.jpg)
+
+!SLIDE center
+# Tail Recursion
+![BarbaraBush](barbara_bush.jpg)
+
+

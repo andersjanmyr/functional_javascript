@@ -33,19 +33,14 @@
 
 .notes Visited from Texas to invest some oil money in this new hype
 called the internet. 
+Daddy, daddy, there is this german dude, that is trying to put
+a foreign programming language into an american browser.
 
 !SLIDE center
 # George Bush Sr.
 ![GBS](george_bush_sr.png)
 
 .notes Head of the CIA, at the time. 
-
-!SLIDE center
-# The Bushes
-![Bushes](the_bushes.jpg)
-
-.notes Daddy, daddy, there is this german dude, that is trying to put
-a foreign programming language into an american browser.
 How do you know its not american?
 It has these weird sounding names in it, LAMBDA and stuff.
 We can't have that!
@@ -73,7 +68,7 @@ We can't have that!
 
 
 !SLIDE
-# SchemaScript
+# SchemeScript
 
     @@@python
     (define map
@@ -92,7 +87,7 @@ Big George goes, Look here fellow, you better change it some more or
 we'll deport your ass!
 
 !SLIDE
-# SchemaScript
+# SchemeScript
 
     @@@python
     (define map
@@ -115,36 +110,11 @@ we'll deport your ass!
           return map(list, f).unshift(f(car));
         }
 
+!SLIDE center
+# Little George Happy
+![geroge_happy](george_jr_happy.jpg)
 
+.notes With that little george is happy.
 
-!SLIDE bullets
-# First Class Functions
-
-* Created during execution
-* Stored in data structures
-* Passed as arguments
-* Returned as values from functions
-
-!SLIDE
-# function operator
-
-    @@@ javascript
-    var f = function sum(arg1, arg2) {
-      return arg1 + arg2;
-    }
-
-!SLIDE
-# function statement
-
-    @@@ javascript
-    // Statement
-    function sum(arg1, arg2) {
-      return arg1 + arg2;
-    }
-
-    // Rougly equivalent to
-    var sum = function(arg1, arg2) {
-      return arg1 + arg2;
-    }
 
 
