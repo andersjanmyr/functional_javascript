@@ -3,7 +3,7 @@
 
 ## Code
 
-* http:://github.com/andersjanmyr/TODO CODE HERE 
+* https://github.com/andersjanmyr/functional_javascript
 
 ## Presentation
 
