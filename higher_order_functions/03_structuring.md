@@ -137,14 +137,14 @@
     @@@javaScript
     var app = {};
     (function() {
-        var id = 0;
+        var id = 42;
 
         this.next = function() {
             return id++;
         };
 
         this.reset = function() {
-            id = 0;
+            return id = 0;
         }
     }).apply(app); // call would also work here
 
