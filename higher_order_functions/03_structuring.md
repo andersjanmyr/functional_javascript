@@ -1,58 +1,152 @@
+!SLIDE center
+# Magic Variables
+
+!SLIDE 
+# Magic variable `this`
+
+<table>
+<tr>
+<th>Invocation</th>
+<th>Example</th>
+<th><pre>this</pre></th>
+</tr>
+<tr>
+<td>function</td>
+<td><pre>say('Hi');</pre></td>
+<td>the global object (window)</td>
+</tr>
+<tr>
+<td>method</td>
+<td><pre>tapir.say('Hi');</pre></td>
+<td>the target object (tapir)</td>
+</tr>
+<tr>
+<td>constructor</td>
+<td><pre>new say('Hi');</pre></td>
+<td>a new object</td>
+</tr>
+<tr>
+<td>apply (call)</td>
+<td><pre>say.apply(frog, 'Hi');</pre></td>
+<td>the first parameter to apply (frog)</td>
+</tr>
+</table>
+
+
 !SLIDE execute
-# Fibonacci
+# Magic variable `arguments`
 
     @@@javaScript
-    function fib(n) {
-        if (n < 2) {
-            return n;
-        }
-        return fib(n-1) + fib(n-2);
-    }
- 
-    result = time(function() { return fib(36); });
-
-
-
-!SLIDE execute
-# memoize
-
-    @@@javaScript
-    function memoize(fn) {
-      return function() {
-        var key = serialize(arguments);
-        var cache = fn['_cache'] || (fn['_cache'] = {});
-        return key in cache ? cache[key] :
-          cache[key] = fn.apply(this, arguments);
+    function sum() {
+      var i, n = arguments.length, total = 0;
+      for (i = 0; i < n; i += 1) {
+        total += arguments[i];
       }
+      return total;
+    }
+    
+    result = sum(6, 6, 6);
+
+
+!SLIDE center
+# Structure Functions
+## Module Functions
+
+
+!SLIDE execute
+# Namespace
+
+    @@@javaScript
+    var app = {}
+    app.id = 42;
+
+    app.next = function() {
+        return app.id++;
     }
 
-    var memFib = memoize(fib);
-    result = time(function() {
-        return memFib(36)
-    });
+    app.reset = function() {
+        return app.id = 0;
+    }
+
+    result = [app.next(), app.next(), app.reset()]
+
+
 
 
 !SLIDE execute
-# curry
+# Namspace with Literals
+    @@@javaScript
+    var app = {
+        id: 42,
+
+        next: function() {
+            return this.id++;
+        },
+
+        reset: function() {
+            return this.id = 0;
+        }
+    }
+
+    result = [app.next(), app.next(), app.reset()]
+
 
 
 !SLIDE execute
-# wrap
+# Module
 
+    @@@javaScript
+    var app = (function() {
+        var id= 42;
+
+        return {
+            next: function() {
+                return id++;
+            },
+
+            reset: function() {
+                return id = 0;
+            }
+        };
+    })();	
+
+    result = [app.next(), app.next(), app.reset()]
 
 !SLIDE execute
-# curry
+# Dynamic Module
 
+    @@@javaScript
+    var app = {};
+    (function(context) {
+        var id = 42;
+
+        context.next = function() {
+            return id++;
+        };
+
+        context.reset = function() {
+            return id = 0;
+        }
+    })(app);	
+
+    result = [app.next(), app.next(), app.reset()]
 
 !SLIDE execute
-# namespace
+# Dynamic Module with `this`
 
+    @@@javaScript
+    var app = {};
+    (function() {
+        var id = 0;
 
-!SLIDE execute
-# encapsulation
+        this.next = function() {
+            return id++;
+        };
 
+        this.reset = function() {
+            id = 0;
+        }
+    }).apply(app); // call would also work here
 
-!SLIDE execute
-# module
-
+    result = [app.next(), app.next(), app.reset()]
 
