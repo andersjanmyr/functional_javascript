@@ -1,3 +1,6 @@
+!SLIDE
+# Higher Order Functions
+
 !SLIDE execute
 # each
 
@@ -17,9 +20,9 @@
 !SLIDE execute
 # filter
 
-    @@@ javascript
+    @@@ javaScript
     // Arguments, an array to iterate over,
-    // an predicate to apply to each item
+    // a predicate to apply to each item
     // returns a new array with the
     // items that evaluated to true
     function filter(array, predicate) {
@@ -41,7 +44,7 @@
 
     @@@ javaScript
     // Arguments, an array, to iterate over,
-    // an unary function, to apply to each item
+    // a unary function, to apply to each item
     // returns a new array with the result
     function map(array, unaryFunc) {
       var list = [];
@@ -85,13 +88,31 @@
 # sum
 
     @@@ javaScript
+    // Sums all the elements of an array
     function sum(array) {
-      reduce(array, 0, function(a, b) {
+      return reduce(array, 0, function(a, b) {
         return a + b;
       });
     }
 
-    sum([1,2,3,4]); // 10
+    result = sum([1,2,3,4]);
+
+!SLIDE execute
+# join
+
+    @@@ javaScript
+    // Joins all the elements of an array
+    // With an optional separator
+    function join(array, sep) {
+      if (!sep) sep = ' '
+      first = array.shift();
+      return reduce(array, first, function(a, b) {
+        return a + sep + b;
+      });
+    }
+
+    result = join([1,2,3,4], ':');
+
 
 
 
@@ -99,6 +120,7 @@
 # zip
 
     @@@ javaScript
+    // Zips two arrays with an optional function
     function zip(arr1, arr2, binaryFunc) {
       if (!binaryFunc)
         binaryFunc = function(a, b) {
@@ -111,18 +133,134 @@
       return list;
     }
 
-    result = zip([1,2,3], [9, 10], function(a,b) {return a+b});
+    result = zip([1,2,3], [9, 10, 11]);
+
+!SLIDE execute
+# zip
+
+    @@@ javaScript
+    result = zip([1,2,3], [9, 10, 11], 
+        function(a,b) {return a*b});
+    
+!SLIDE
+# Recursion vs Iteration 
+
+!SLIDE bullets
+# Tail Recursion
+
+* A optimization of recursive functions
+* The recursive call must be last in the function
+* Flattens the stack
+* Replaces a `call` with a `jump`
+
+
+!SLIDE execute
+# factorial
+    
+    @@@ javaScript
+    function factorial(n) { 
+      if (n == 0)
+       return 1;
+      else
+       return n * factorial(n-1);
+    }
+
+    result = factorial(5);
+
+!SLIDE 
+# factorial
+    
+    @@@ javaScript
+    function factorial(n) {
+      function fact(i, ack) {
+        if (i == 0)
+         return ack;
+        else
+         return fact(i-1, i*ack);
+      }
+      return fact(n, 1);
+    }
+
+    result = factorial(5);
+
+!SLIDE 
+# Tail Recursion
+## Stack Depth = 4
+
+<table>
+<tr>
+<td>
+<pre>
+call factorial (3)
+ call factorial (2)
+  call factorial (1)
+   call factorial (0)
+   return 1
+  return 1
+ return 2
+return 6
+</pre>
+</td>
+<td>
+<pre>
+call factorial (3)
+ call fact (3 1)
+  call fact (2 3)
+   call fact (1 6)
+    call fact (0 6)
+    return 6
+   return 6
+  return 6
+ return 6
+return 6
+</pre>
+</td>
+</tr>
+<table>
+
+!SLIDE 
+# Tail Recursion
+## Stack Depth = 1
+
+<table>
+<tr>
+<td>
+<pre>
+call factorial (3)
+ call fact (3 1)
+  call fact (2 3)
+   call fact (1 6)
+    call fact (0 6)
+    return 6
+   return 6
+  return 6
+ return 6
+return 6
+</pre>
+</td>
+<td>
+<pre>
+call factorial (3)
+ jump fact (3 1)
+  jump fact (2 3)
+   jump fact (1 6)
+    jump fact (0 6)
+    return 6
+</pre>
+</td>
+</tr>
+<table>
+
 
 
 !SLIDE center
-# Tail Recursion
-
-!SLIDE center
-# Tail Recursion
+# Tail Recursion YES!
 ![Bushes](the_bushes.jpg)
 
+
+
 !SLIDE center
-# Tail Recursion
+# Tail Recursion NO!!!
 ![BarbaraBush](barbara_bush.jpg)
 
 

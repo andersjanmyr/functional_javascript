@@ -1,5 +1,5 @@
 !SLIDE center
-# Javascript
+# Functional Javascript
 
 !SLIDE bullets
 # First Class Functions
@@ -26,8 +26,8 @@
       return arg1 + arg2;
     }
 
-    // Rougly equivalent to
-    var sum = function(arg1, arg2) {
+    // Equivalent to
+    var sum = function sum(arg1, arg2) {
       return arg1 + arg2;
     }
 
@@ -72,7 +72,7 @@
     result = unary(21);
 
 !SLIDE execute
-# Binary function
+# Binary function, reduction function
 
     @@@ javaScript
     // Takes two arguments,
