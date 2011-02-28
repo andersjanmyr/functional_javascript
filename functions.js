@@ -54,4 +54,31 @@ function zip(arr1, arr2, binaryFunc) {
   return list;
 }
 
+function time(fn) {
+    var start = new Date().getTime();
+    result = fn();
+    var end = new Date().getTime();
+    var elapsed = end - start;
+    return [result, elapsed + ' ms'];
+}
+
+function fib(n) {
+    if (n < 2) {
+        return n;
+    }
+    return fib(n-1) + fib(n-2);
+}
+
+function memoize(fn) {
+  return function() {
+    var key = serialize(arguments);
+    var cache = fn['_cache'] || (fn['_cache'] = {});
+    return key in cache ? cache[key] :
+      cache[key] = fn.apply(this, arguments);
+  }
+}
+
+function serialize() {
+    return Array.prototype.splice.call(null, arguments, 0);
+}
 

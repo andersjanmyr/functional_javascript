@@ -1,5 +1,35 @@
 !SLIDE execute
+# Fibonacci
+
+    @@@javaScript
+    function fib(n) {
+        if (n < 2) {
+            return n;
+        }
+        return fib(n-1) + fib(n-2);
+    }
+ 
+    result = time(function() { return fib(36); });
+
+
+
+!SLIDE execute
 # memoize
+
+    @@@javaScript
+    function memoize(fn) {
+      return function() {
+        var key = serialize(arguments);
+        var cache = fn['_cache'] || (fn['_cache'] = {});
+        return key in cache ? cache[key] :
+          cache[key] = fn.apply(this, arguments);
+      }
+    }
+
+
+    result = time(function() {
+        return memoize(fib)(36)
+    });
 
 
 !SLIDE execute
