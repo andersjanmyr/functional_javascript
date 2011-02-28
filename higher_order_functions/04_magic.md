@@ -50,23 +50,41 @@
 !SLIDE execute
 # Curry
 
+    @@@javaScript
+    Function.prototype.curry = function() {
+      var slice = Array.prototype.slice;
+        var fn = this;
+        var args = slice.apply(arguments);
+        return function() {
+            return fn.apply(null, args.concat(slice.apply(arguments)));
+        };
+    }
+
+    var addFortyTwo = sum.curry(42);
+    result = addFortyTwo(624);
+
 
 !SLIDE execute
 # Wrap
 
+    @@@javaScript
+    Function.prototype.wrap = function(wrapper) {
+        var slice = Array.prototype.slice;
+        var _method = this;
+        return function() {
+            var args = slice.apply(arguments);
+            return wrapper.apply(this, 
+                    [_method].concat(args));
+        }
+    }
+    
+    sum = sum.wrap(function() {
+        var args = Array.prototype.slice.apply(arguments);
+        var original = args.shift();
+        return original.apply(this, args) * 2;
+    });
+    result = sum(1, 2, 3, 4);
 
-!SLIDE execute
-# Y Combinator, Scheme
-
-    @@@ python
-    (define Y
-      (lambda (X)
-        ((lambda (procedure)
-           (X (lambda (arg)
-            ((procedure procedure) arg))))
-         (lambda (procedure)
-           (X (lambda (arg)
-            ((procedure procedure) arg)))))))
 
 
 !SLIDE execute

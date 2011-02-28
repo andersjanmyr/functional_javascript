@@ -82,3 +82,8 @@ function serialize() {
     return Array.prototype.splice.call(null, arguments, 0);
 }
 
+function sum(){
+    for(var s = 0, i = arguments.length; i > 0;s += arguments[--i]);
+    return s;
+};
+
