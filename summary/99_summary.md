@@ -7,7 +7,7 @@
 
 ## Presentation
 
-* http://github.com/andersjanmyr/TODO PRESENTATION HERE
+* http://functional-javascript.heroku.com
 
 
 !SLIDE
