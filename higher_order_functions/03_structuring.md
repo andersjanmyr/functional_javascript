@@ -26,9 +26,9 @@
       }
     }
 
-
+    var memFib = memoize(fib);
     result = time(function() {
-        return memoize(fib)(36)
+        return memFib(36)
     });
 
 
