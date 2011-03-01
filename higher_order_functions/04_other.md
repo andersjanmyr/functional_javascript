@@ -88,10 +88,10 @@
 
 
 !SLIDE execute
-# Y Combinator, Javascript
+# Y Combinator
 
     @@@ javaScript
-    function Y (X) {
+    function Y(X) {
       return (function(procedure) {
         return X(function(arg) {
           return procedure(procedure)(arg);
@@ -102,3 +102,15 @@
         });
       });
     }
+
+!SLIDE execute
+# Y Combinator
+
+    @@@ javaScript
+    var factorial = Y(function(recurse) {
+      return function(x) {
+        return x == 0 ? 1 : x * recurse(x-1);
+      };
+    });
+
+    result = factorial(6);
