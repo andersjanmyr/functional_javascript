@@ -1,3 +1,8 @@
+!SLIDE center
+# Other Useful Functions
+
+
+
 !SLIDE execute
 # Fibonacci
 
@@ -36,14 +41,17 @@
     
     @@@javaScript
     function mixin(destination, source) {
-       for (property in source)
-            destination[property] = source[property];
+       for (var key in source)
+            destination[key] = source[key];
        return destination;
     }
 
-    var coolish = {cool: function() { return "Yes I'm cool" }};
+    var coolish = {cool: function() { 
+        return this + " are cool!" }
+    };
+
     mixin(String.prototype, coolish);
-    result = 'Anders'.cool();
+    result = 'Tapirs'.cool();
 
 
 
@@ -55,9 +63,7 @@
       var slice = Array.prototype.slice;
         var fn = this;
         var args = slice.apply(arguments);
-        return function() {
-            return fn.apply(null, args.concat(slice.apply(arguments)));
-        };
+        return function() { return fn.apply(null, args.concat(slice.apply(arguments))); };
     }
 
     var addFortyTwo = sum.curry(42);

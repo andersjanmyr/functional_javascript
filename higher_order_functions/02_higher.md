@@ -12,6 +12,7 @@
         action(array[i]);
       }
     }
+
     result = '';
     each([1,2,3], function(i) {
       result += " Item: " + i;
@@ -148,7 +149,7 @@
 !SLIDE bullets
 # Tail Recursion
 
-* A optimization of recursive functions
+* An optimization of recursive functions
 * The recursive call must be last in the function
 * Flattens the stack
 * Replaces a `call` with a `jump`

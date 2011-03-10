@@ -1,5 +1,5 @@
 !SLIDE center
-# Magic Variables
+# Javascript Magic Variables
 
 !SLIDE 
 # Magic variable `this`

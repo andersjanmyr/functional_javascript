@@ -9,6 +9,9 @@
 
 * http://functional-javascript.heroku.com
 
+## Credits
+
+* https://github.com/schacon/showoff
 
 !SLIDE
 # Questions?

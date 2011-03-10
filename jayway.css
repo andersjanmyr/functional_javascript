@@ -32,6 +32,10 @@ td {
     padding: .4em;
 }
 
+td pre {
+  font-size: 36px;
+}
+
 td:nth-child(1) {
     font-size: 2em;
     padding-left: .4em;
