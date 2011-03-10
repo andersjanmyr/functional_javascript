@@ -12,9 +12,9 @@
         action(array[i]);
       }
     }
-
-    result = each([1,2,3], function(i) {
-      console.log("Item: " + i);
+    result = '';
+    each([1,2,3], function(i) {
+      result += " Item: " + i;
     });
 
 !SLIDE execute

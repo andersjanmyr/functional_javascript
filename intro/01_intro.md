@@ -46,7 +46,7 @@ It has these weird sounding names in it, LAMBDA and stuff.
 We can't have that!
 
 !SLIDE center
-# George Makes some Calls
+# Big George Makes Some Calls
 ![george_calls](george_calls.jpg)
 
 
@@ -86,6 +86,11 @@ We can't have that!
 Big George goes, Look here fellow, you better change it some more or
 we'll deport your ass!
 
+!SLIDE center
+# Big George Makes Some More Calls
+![george_calls](george_calls.jpg)
+
+
 !SLIDE
 # SchemeScript
 
@@ -109,6 +114,7 @@ we'll deport your ass!
           var car = list.shift();
           return map(list, f).unshift(f(car));
         }
+      }
 
 !SLIDE center
 # Little George Happy

@@ -10,7 +10,7 @@
 * Returned as values from functions
 
 !SLIDE
-# function operator
+# function *operator*
 
     @@@ javascript
     var f = function sum(arg1, arg2) {
@@ -18,7 +18,7 @@
     }
 
 !SLIDE
-# function statement
+# function *statement*
 
     @@@ javascript
     // Statement
@@ -57,7 +57,8 @@
       return arg === 'tapir';
     }
 
-    result = predicate('tapir');
+    result = [predicate('tapir'), 
+              predicate('aardvark')];
 
 !SLIDE execute
 # Unary function, mapping function
@@ -78,7 +79,7 @@
     // Takes two arguments,
     // and, returns one value
     function binary(arg1, arg2) {
-      return [arg1, arg2];
+      return arg1 + arg2;
     }
 
     result = binary(1, 2);
