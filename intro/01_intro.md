@@ -5,6 +5,7 @@
 ### @andersjanmyr
 
 !SLIDE center transition=blindZ
+# Short History
 ![Netscape 1995](netscape.png)
 
 .notes The Wild West of the Internet
