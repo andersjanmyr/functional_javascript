@@ -1,4 +1,4 @@
-!SLIDE center
+!SLIDE center transition=cover
 # Functional Javascript
 
 !SLIDE bullets
@@ -31,7 +31,7 @@
       return arg1 + arg2;
     }
 
-!SLIDE
+!SLIDE center transition=wipe
 # Basic Functions
 
 !SLIDE execute

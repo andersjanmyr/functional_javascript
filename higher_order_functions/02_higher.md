@@ -1,4 +1,4 @@
-!SLIDE
+!SLIDE center transition=toss
 # Higher Order Functions
 
 !SLIDE execute
@@ -143,7 +143,7 @@
     result = zip([1,2,3], [9, 10, 11], 
         function(a,b) {return a*b});
     
-!SLIDE
+!SLIDE center transtion=growY
 # Recursion vs Iteration 
 
 !SLIDE bullets
@@ -166,7 +166,7 @@
        return n * factorial(n-1);
     }
 
-    result = factorial(5);
+    result = factorial(3);
 
 !SLIDE 
 # factorial
@@ -182,9 +182,9 @@
       return fact(n, 1);
     }
 
-    result = factorial(5);
+    result = factorial(3);
 
-!SLIDE 
+!SLIDE center transition=scrollHorz
 # Tail Recursion
 ## Stack Depth = 4
 

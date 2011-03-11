@@ -1,4 +1,4 @@
-!SLIDE bullets small
+!SLIDE bullets small transition=curtainX
 # Code and Slides
 
 ## Code

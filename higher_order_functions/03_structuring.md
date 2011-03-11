@@ -1,4 +1,4 @@
-!SLIDE center
+!SLIDE center transition=shuffle
 # Javascript Magic Variables
 
 !SLIDE 
@@ -48,7 +48,7 @@
     result = sum(6, 6, 6);
 
 
-!SLIDE center
+!SLIDE center transition=turnDown
 # Structure Functions
 ## Module Functions
 

@@ -1,4 +1,4 @@
-!SLIDE center
+!SLIDE center transition=zoom
 # Other Useful Functions
 
 
