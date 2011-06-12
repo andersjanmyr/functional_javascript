@@ -168,7 +168,7 @@
 
     result = factorial(3);
 
-!SLIDE 
+!SLIDE execute
 # factorial
     
     @@@ javaScript
@@ -192,10 +192,10 @@
 <tr>
 <td>
 <pre>
-call factorial (3)
- call factorial (2)
-  call factorial (1)
-   call factorial (0)
+call factorial(3)
+ call factorial(2)
+  call factorial(1)
+   call factorial(0)
    return 1
   return 1
  return 2
@@ -204,11 +204,11 @@ return 6
 </td>
 <td>
 <pre>
-call factorial (3)
- call fact (3 1)
-  call fact (2 3)
-   call fact (1 6)
-    call fact (0 6)
+call factorial(3)
+ call fact(3 1)
+  call fact(2 3)
+   call fact(1 6)
+    call fact(0 6)
     return 6
    return 6
   return 6
@@ -217,7 +217,7 @@ return 6
 </pre>
 </td>
 </tr>
-<table>
+</table>
 
 !SLIDE 
 # Tail Recursion
@@ -250,18 +250,29 @@ call factorial (3)
 </pre>
 </td>
 </tr>
-<table>
+</table>
 
 
 
-!SLIDE center
-# Tail Recursion YES!
-![Bushes](the_bushes.jpg)
+!SLIDE execute
+# Tail Recursion in Javascript 
+
+    @@@ javaScript
+    function factorial(n, callback) {
+      function fact(i, ack) {
+        if (i == 0)
+          callback(ack)
+        else
+          setTimeout(function() {fact(i-1, i*ack);}, 0);
+      }
+      return fact(n, 1);
+    }
+  
+    factorial(3, function(result) {
+      alert(result);
+    });
 
 
 
-!SLIDE center
-# Tail Recursion NO!!!
-![BarbaraBush](barbara_bush.jpg)
 
 

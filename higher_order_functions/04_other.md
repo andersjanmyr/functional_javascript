@@ -22,6 +22,7 @@
 # Memoize
 
     @@@javaScript
+    // Memorizes arguments and results
     function memoize(fn) {
       return function() {
         var key = serialize(arguments);
@@ -40,6 +41,7 @@
 # Mixin
     
     @@@javaScript
+    // Copies all properties to an object
     function mixin(destination, source) {
        for (var key in source)
             destination[key] = source[key];
@@ -53,6 +55,25 @@
     mixin(String.prototype, coolish);
     result = 'Tapirs'.cool();
 
+!SLIDE execute
+# Compose
+
+    @@@javaScript
+    function compose() {
+      var slice = Array.prototype.slice;
+      var fns =  slice.apply(arguments);
+      return function() {
+        for (var i = fns.length; --i >= 0; )
+          arguments = [fns[i].apply(this, arguments)];
+        return arguments[0];
+      }
+    }
+
+    function times2(n) {return n * 2}
+    function plus1(n) {return n + 1}
+    result = compose(plus1, times2, sum)(1,2,3);
+    console.log(result);
+ 
 
 
 !SLIDE execute
@@ -84,8 +105,13 @@
         }
     }
     
+!SLIDE execute
+# Wrap (using)
+
+    @@@javaScript
     sum = sum.wrap(function() {
-        var args = Array.prototype.slice.apply(arguments);
+        var slice = Array.prototype.slice
+        var args = slice.apply(arguments);
         var original = args.shift();
         return original.apply(this, args) * 2;
     });
@@ -93,7 +119,7 @@
 
 
 
-!SLIDE execute
+!SLIDE 
 # Y Combinator
 
     @@@ javaScript
@@ -110,7 +136,7 @@
     }
 
 !SLIDE execute
-# Y Combinator
+# Y Combinator (using)
 
     @@@ javaScript
     var factorial = Y(function(recurse) {

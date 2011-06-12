@@ -87,6 +87,16 @@ function sum(){
     return s;
 };
 
+Function.prototype.wrap = function(wrapper) {
+    var slice = Array.prototype.slice;
+    var _method = this;
+    return function() {
+        var args = slice.apply(arguments);
+        return wrapper.apply(this, 
+                [_method].concat(args));
+    }
+}
+
 
 function Y(X) {
   return (function(procedure) {

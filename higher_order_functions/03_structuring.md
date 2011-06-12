@@ -68,7 +68,8 @@
         return app.id = 0;
     }
 
-    result = [app.next(), app.next(), app.reset()]
+    result = [app.next(), app.next(),
+              app.reset()]
 
 
 
@@ -88,7 +89,8 @@
         }
     }
 
-    result = [app.next(), app.next(), app.reset()]
+    result = [app.next(), app.next(),
+              app.reset()]
 
 
 
@@ -110,7 +112,8 @@
         };
     })();	
 
-    result = [app.next(), app.next(), app.reset()]
+    result = [app.next(), app.next(),
+              app.reset()]
 
 !SLIDE execute
 # Dynamic Module
@@ -127,9 +130,10 @@
         context.reset = function() {
             return id = 0;
         }
-    })(app);	
+    })(app);
 
-    result = [app.next(), app.next(), app.reset()]
+    result = [app.next(), app.next(),
+              app.reset()]
 
 !SLIDE execute
 # Dynamic Module with `this`
@@ -148,5 +152,6 @@
         }
     }).apply(app); // call would also work here
 
-    result = [app.next(), app.next(), app.reset()]
+    result = [app.next(), app.next(),
+              app.reset()]
 
