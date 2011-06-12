@@ -59,6 +59,7 @@
 # Compose
 
     @@@javaScript
+    // Composes a number of functions into one
     function compose() {
       var slice = Array.prototype.slice;
       var fns =  slice.apply(arguments);
@@ -80,6 +81,8 @@
 # Curry
 
     @@@javaScript
+    // Creates a new function with the given
+    // arguments applied
     Function.prototype.curry = function() {
       var slice = Array.prototype.slice;
         var fn = this;
@@ -95,6 +98,7 @@
 # Wrap
 
     @@@javaScript
+    // Wraps a function with another function
     Function.prototype.wrap = function(wrapper) {
         var slice = Array.prototype.slice;
         var _method = this;
@@ -112,6 +116,7 @@
     sum = sum.wrap(function() {
         var slice = Array.prototype.slice
         var args = slice.apply(arguments);
+        // First argument is the wrapped function
         var original = args.shift();
         return original.apply(this, args) * 2;
     });
@@ -123,6 +128,8 @@
 # Y Combinator
 
     @@@ javaScript
+    // Creates a recursive function
+    // from one that isn't
     function Y(X) {
       return (function(procedure) {
         return X(function(arg) {
