@@ -34,15 +34,15 @@
 
 .notes Visited from Texas to invest some oil money in this new hype
 called the internet. 
-Daddy, daddy, there is this german dude, that is trying to put
-a foreign programming language into an american browser.
+Daddy, daddy, there is this German dude, that is trying to put
+a foreign programming language into an American browser.
 
 !SLIDE center
 # George Bush Sr.
 ![GBS](george_bush_sr.png)
 
 .notes Head of the CIA, at the time. 
-How do you know its not american?
+How do you know its not American?
 It has these weird sounding names in it, LAMBDA and stuff.
 We can't have that!
 
@@ -54,6 +54,7 @@ We can't have that!
 !SLIDE center
 ![Brendan Eich](brendan_eich2.jpg)
 ## Brendan Eich
+
 .notes Pissed off, but what can he do?
 
 !SLIDE
@@ -84,13 +85,13 @@ We can't have that!
 ![Bushes](the_bushes2.jpg)
 
 .notes Daddy, daddy, all he did was change the name, he's mocking me!
-Big George goes, Look here fellow, you better change it some more or
-we'll deport your ass!
 
 !SLIDE center
 # Big George Makes Some More Calls
 ![george_calls](george_calls.jpg)
 
+.notes Big George goes, Look here fellow, you better change it some more or
+we'll deport your ass!
 
 !SLIDE
 # SchemeScript

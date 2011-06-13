@@ -1,13 +1,33 @@
 !SLIDE center transition=cover
 # Functional Javascript
 
-!SLIDE bullets
+!SLIDE bullets incremental
+# Functional?
+
+* Functions (Doh!)
+* No side-effects
+* No *visible* side-effects
+* **Minimum of visible** side-effects
+
+!SLIDE bullets incremental
+
+# Why Functional?
+
+* Easier to reason about
+* Easier to test
+* Simpler concurrency
+
+!SLIDE bullets incremental
 # First Class Functions
 
 * Created during execution
 * Stored in data structures
 * Passed as arguments
 * Returned as values from functions
+
+
+!SLIDE center transition=cover
+# Code!
 
 !SLIDE
 # function *operator*
