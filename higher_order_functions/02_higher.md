@@ -114,6 +114,38 @@
 
     result = join([1,2,3,4], ':');
 
+!SLIDE execute
+# any
+
+    @@@javaScript
+    function any(array, predicate) {
+      return reduce(array, false, function(a, b) {
+        return a || predicate(b);
+      });
+    }
+
+    function even(n) { return n%2 === 0}
+    result = [
+      any([1, 3, 5], even),
+      any([1, 3, 6], even)
+    ]
+
+!SLIDE execute
+# all
+
+    @@@javaScript
+    function all(array, predicate) {
+      return reduce(array, true, function(a, b) {
+        return a && predicate(b);
+      });
+    }
+
+    function even(n) { return n%2 === 0}
+    result = [
+      all([1, 3, 5], even),
+      all([2, 4, 6], even)
+    ]
+
 
 
 
