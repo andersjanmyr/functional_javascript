@@ -4,6 +4,17 @@
 ### http://anders.janmyr.com
 ### @andersjanmyr
 
+!SLIDE bullets small
+# Overview
+
+* Javascript
+* Functional Programming
+* Higher Order Functions
+* Recursion and Iteration
+* Structure Functions
+* Other Interesting Functions
+
+
 !SLIDE center transition=blindZ
 # Short History
 ![Netscape 1995](netscape.png)
@@ -108,15 +119,14 @@ we'll deport your ass!
 # JavaScript
 
     @@@javascript
-    var map =
-      function(list, f) {
-        if (!list) {
-          return [];
-        } else {
-          var car = list.shift();
-          return map(list, f).unshift(f(car));
-        }
+    function map(list, f) {
+      if (!list) {
+        return [];
+      } else {
+        var car = list.shift();
+        return map(list, f).unshift(f(car));
       }
+    }
 
 !SLIDE center
 # Little George Happy
