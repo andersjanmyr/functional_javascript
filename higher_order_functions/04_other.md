@@ -8,9 +8,8 @@
 
     @@@javaScript
     function fib(n) {
-        if (n < 2) {
-            return n;
-        }
+        if (n < 2) return n;
+
         return fib(n-1) + fib(n-2);
     }
  
@@ -26,7 +25,8 @@
     function memoize(fn) {
       return function() {
         var key = serialize(arguments);
-        var cache = fn['_cache'] || (fn['_cache'] = {});
+        var cache = fn['_cache']
+            || (fn['_cache'] = {});
         return key in cache ? cache[key] :
           cache[key] = fn.apply(this, arguments);
       }
@@ -72,8 +72,8 @@
 
     function times2(n) {return n * 2}
     function plus1(n) {return n + 1}
+
     result = compose(plus1, times2, sum)(1,2,3);
-    console.log(result);
  
 
 
@@ -85,9 +85,12 @@
     // arguments applied
     Function.prototype.curry = function() {
       var slice = Array.prototype.slice;
-        var fn = this;
-        var args = slice.apply(arguments);
-        return function() { return fn.apply(null, args.concat(slice.apply(arguments))); };
+      var fn = this;
+      var args = slice.apply(arguments);
+      return function() {
+      return fn.apply(null,
+        args.concat(slice.apply(arguments)));
+      };
     }
 
     var addFortyTwo = sum.curry(42);
