@@ -15,7 +15,7 @@
 
 * Easier to reason about
 * Easier to test
-* Simpler concurrency
+* (Simpler concurrency)
 
 !SLIDE bullets incremental
 # First Class Functions
@@ -62,10 +62,10 @@
     // usually, does something with it,
     // and, returns nothing
     function action(arg) {
-      console.log(arg);
+      alert('Hello ' + arg);
     }
 
-    result = action('tapir');
+    action('tapir');
 
 !SLIDE execute
 # Predicate

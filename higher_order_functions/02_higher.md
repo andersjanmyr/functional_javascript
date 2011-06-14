@@ -217,7 +217,7 @@
     result = factorial(3);
 
 !SLIDE center transition=scrollHorz
-# Tail Recursion
+# Recursion
 ## Stack Depth = 4
 
 <table>
@@ -274,11 +274,11 @@ return 6
 <td>
 <pre>
 call factorial (3)
- jump fact (3 1)
+  jump fact (3 1)
   jump fact (2 3)
-   jump fact (1 6)
-    jump fact (0 6)
-    return 6
+  jump fact (1 6)
+  jump fact (0 6)
+  return 6
 </pre>
 </td>
 </tr>

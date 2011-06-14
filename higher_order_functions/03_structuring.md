@@ -27,7 +27,9 @@
 </tr>
 <tr>
 <td>apply (call)</td>
-<td><pre>say.apply(frog, 'Hi');</pre></td>
+<td><pre>say.apply(frog, ['Hi']);
+say.call(frog, 'Hi');
+</pre></td>
 <td>the first parameter to apply (frog)</td>
 </tr>
 </table>
