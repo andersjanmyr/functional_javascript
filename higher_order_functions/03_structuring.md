@@ -136,7 +136,7 @@
               app.reset()]
 
 !SLIDE execute
-# Dynamic Module with `this`
+# Dynamic Module with `apply`
 
     @@@javaScript
     var app = {};
@@ -155,3 +155,20 @@
     result = [app.next(), app.next(),
               app.reset()]
 
+!SLIDE execute
+# Class Function
+
+    @@@javaScript
+    function Tapir(name) {
+      if (this instanceof Tapir)
+        this.name = name;
+      else {
+        return new Tapir(name);
+      }
+    }
+
+    result = [
+      Tapir('Kjell'),
+      Tapir('Albert'),
+      new Tapir('Mario')
+    ];
