@@ -110,3 +110,13 @@ function Y(X) {
   });
 }
 
+// function Y(X) {
+  // var proc = function(procedure) {
+    // return X(function(arg) {
+      // return procedure(procedure)(arg);
+    // });
+  // }
+
+  // return proc(proc);
+// }
+
