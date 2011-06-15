@@ -20,7 +20,7 @@
 
 ## Asynkron Programmering med Node.js
 
-* https://http://20110622jayway.eventbrite.com/
+* https://20110622jayway.eventbrite.com/
 
 ## Credits
 
