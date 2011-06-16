@@ -44,3 +44,19 @@ td:nth-child(3) {
     font-size: 1.4em;
     padding-left: .4em;
 }
+
+.bullets ul {
+  list-style: square url(images/jay_bullet_large.png);
+  list-style-position: inside;
+}
+
+.small ul {
+  list-style: square url(images/jay_bullet.png);
+  list-style-position: inside;
+}
+
+.bullets ul li {
+  text-align: left;
+  padding: 10px 90px;
+}
+
