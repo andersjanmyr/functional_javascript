@@ -78,8 +78,8 @@ function memoize(fn) {
   }
 }
 
-function serialize() {
-    return Array.prototype.splice.call(null, arguments, 0);
+function serialize(arguments) {
+    return Array.prototype.splice.call(this, arguments, 0);
 }
 
 function sum(){

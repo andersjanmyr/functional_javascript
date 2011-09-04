@@ -61,11 +61,11 @@
     // Takes one argument,
     // usually, does something with it,
     // and, returns nothing
-    function action(arg) {
+    function sayHello(arg) {
       alert('Hello ' + arg);
     }
 
-    action('tapir');
+    sayHello('tapir');
 
 !SLIDE execute
 # Predicate
@@ -73,12 +73,12 @@
     @@@ javaScript
     // Takes one argument
     // and, returns a boolean
-    function predicate(arg) {
+    function isTapir(arg) {
       return arg === 'tapir';
     }
 
-    result = [predicate('tapir'), 
-              predicate('aardvark')];
+    result = [isTapir('tapir'), 
+              isTapir('aardvark')];
 
 !SLIDE execute
 # Unary function, mapping function
@@ -86,11 +86,11 @@
     @@@ javaScript
     // Takes one arguments,
     // and, returns one value
-    function unary(arg) {
+    function multiplyByTwo(arg) {
       return arg * 2;
     }
 
-    result = unary(21);
+    result = multiplyByTwo(21);
 
 !SLIDE execute
 # Binary function, reduction function
@@ -98,9 +98,9 @@
     @@@ javaScript
     // Takes two arguments,
     // and, returns one value
-    function binary(arg1, arg2) {
+    function add(arg1, arg2) {
       return arg1 + arg2;
     }
 
-    result = binary(1, 2);
+    result = add(1, 2);
 
