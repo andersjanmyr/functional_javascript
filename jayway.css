@@ -55,8 +55,19 @@ td:nth-child(3) {
   list-style-position: inside;
 }
 
+.bullets ul ul {
+  list-style: none;
+}
+
+
 .bullets ul li {
   text-align: left;
   padding: 10px 90px;
 }
+
+.bullets ul li li {
+  padding: 0;
+  margin-left: -2em;
+}
+
 

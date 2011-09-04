@@ -1,12 +1,12 @@
-!SLIDE bullets
-# Summary
+!SLIDE bullets small
+# Summary 
 
 * Javascript is a functional language
 * Functional techniques should be used
-*  to enhance readability
-*  to structure the code
-*  to encapsulate secrets
-*  to simplify testing
+* - to enhance readability
+* - to structure the code
+* - to encapsulate secrets
+* - to simplify testing
 
 
 
@@ -17,10 +17,6 @@
 
 * http://functional-javascript.heroku.com
 * https://github.com/andersjanmyr/functional_javascript
-
-## Asynkron Programmering med Node.js
-
-* https://20110622jayway.eventbrite.com/
 
 ## Credits
 

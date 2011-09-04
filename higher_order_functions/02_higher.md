@@ -178,7 +178,7 @@
 !SLIDE center transtion=growY
 # Recursion vs Iteration 
 
-!SLIDE bullets
+!SLIDE small bullets
 # Tail Recursion
 
 * An optimization of recursive functions

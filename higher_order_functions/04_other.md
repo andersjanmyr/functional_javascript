@@ -64,9 +64,10 @@
       var slice = Array.prototype.slice;
       var fns =  slice.apply(arguments);
       return function() {
+        var args = slice.apply(arguments);
         for (var i = fns.length; --i >= 0; )
-          arguments = [fns[i].apply(this, arguments)];
-        return arguments[0];
+          args = [fns[i].apply(this, args)];
+        return args[0];
       }
     }
 
@@ -97,7 +98,7 @@
     result = addFortyTwo(624);
 
 
-!SLIDE execute
+!SLIDE
 # Wrap
 
     @@@javaScript
