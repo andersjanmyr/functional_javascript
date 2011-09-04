@@ -74,6 +74,25 @@ say.call(frog, 'Hi');
               app.reset()]
 
 
+!SLIDE execute
+# Namespace with `this`
+
+    @@@javaScript
+    var app = {}
+    app.id = 42;
+
+    app.next = function() {
+        return this.id++;
+    }
+
+    app.reset = function() {
+        return this.id = 0;
+    }
+
+    result = [app.next(), app.next(),
+              app.reset()]
+
+
 
 
 !SLIDE execute
