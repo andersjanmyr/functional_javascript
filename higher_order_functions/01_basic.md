@@ -23,7 +23,7 @@
 * Created during execution
 * Stored in data structures
 * Passed as arguments
-* Returned as values from functions
+* Returned from functions
 
 
 !SLIDE center transition=cover
