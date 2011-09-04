@@ -105,7 +105,7 @@
     // Joins all the elements of an array
     // With an optional separator
     function join(array, sep) {
-      if (!sep) sep = ' '
+      if (!sep) sep = ' ';
       first = array.shift();
       return reduce(array, first, function(a, b) {
         return a + sep + b;
