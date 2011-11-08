@@ -3,7 +3,7 @@
 
 
 
-!SLIDE execute
+!SLIDE smaller execute
 # Fibonacci
 
     @@@javaScript
@@ -17,7 +17,7 @@
 
 
 
-!SLIDE execute
+!SLIDE smaller execute
 # Memoize
 
     @@@javaScript
@@ -37,7 +37,7 @@
         return memFib(36)
     });
 
-!SLIDE execute
+!SLIDE smaller execute
 # Mixin
     
     @@@javaScript
@@ -55,7 +55,7 @@
     mixin(String.prototype, coolish);
     result = 'Tapirs'.cool();
 
-!SLIDE execute
+!SLIDE smaller execute
 # Compose
 
     @@@javaScript
@@ -78,7 +78,7 @@
  
 
 
-!SLIDE execute
+!SLIDE smaller execute
 # Curry
 
     @@@javaScript
@@ -98,7 +98,7 @@
     result = addFortyTwo(624);
 
 
-!SLIDE
+!SLIDE smaller
 # Wrap
 
     @@@javaScript
@@ -113,7 +113,7 @@
         }
     }
     
-!SLIDE execute
+!SLIDE smaller execute
 # Wrap (using)
 
     @@@javaScript
@@ -128,7 +128,7 @@
 
 
 
-!SLIDE 
+!SLIDE smaller execute
 # Y Combinator
 
     @@@ javaScript
@@ -146,7 +146,7 @@
       });
     }
 
-!SLIDE execute
+!SLIDE smaller execute
 # Y Combinator (using)
 
     @@@ javaScript

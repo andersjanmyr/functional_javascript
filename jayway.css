@@ -19,29 +19,40 @@ th {
     font-size: 2em;
     text-align: left;
     background: darkgray;
-    padding: .5em;
+    padding-left: .5em;
 }
+th pre {
+    font-size: 2em;
+    text-align: left;
+}
+
 th:nth-child(3) {
     font-size: 1.2em;
 }
 
+tr {
+	padding: 0;
+}
 tr:nth-child(2n+1) {
     background: lightgray;
 }
 td {
-    padding: .4em;
+    padding: 0;
 }
 
 td pre {
   font-size: 36px;
+    padding: 0;
 }
 
 td:nth-child(1) {
     font-size: 2em;
+    padding: 0;
     padding-left: .4em;
 }
 td:nth-child(3) {
     font-size: 1.4em;
+    padding: 0;
     padding-left: .4em;
 }
 
