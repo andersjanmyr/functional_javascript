@@ -201,7 +201,7 @@
     result = factorial(3);
 
 !SLIDE execute
-# factorial
+# factorial (tail recursive)
     
     @@@ javaScript
     function factorial(n) {

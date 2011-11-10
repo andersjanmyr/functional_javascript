@@ -81,4 +81,8 @@ td:nth-child(3) {
   margin-left: -2em;
 }
 
+.results {
+	color: white;
+	font-size: 48px;
+}
 
