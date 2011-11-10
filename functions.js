@@ -1,3 +1,5 @@
+
+
 // Arguments, an array to iterate over,
 // an action, to apply to each item
 function each(array, action) {
@@ -119,4 +121,11 @@ function Y(X) {
 
   // return proc(proc);
 // }
-
+$(function() {
+    $('body').append( '<img id="logo" src="/file/images/jay_small.png"/>' );
+    $('#logo').click(function() {
+        var logo = $(this);
+        logo.hide();
+        setTimeout(function() { logo.fadeIn(5000)}, 10000);
+    })
+});

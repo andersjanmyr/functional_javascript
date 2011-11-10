@@ -6,13 +6,13 @@ h1, h2 {
   color: rgb(79, 180, 226);
   font-family: Georgia;
 }
-.content::after {
+#logo {
   position: absolute;
-  right: 120px;
-  bottom: 120px;
-  width: 30px;
-  height: 30px;
-  content: url(images/jay_small.png);
+  right: 40px;
+  bottom: 40px;
+  width: 60px;
+  height: 60px;
+  z-index: 99;
 }
 
 th {
