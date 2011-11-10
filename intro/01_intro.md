@@ -80,7 +80,7 @@ We can't have that!
             (map (cdr list) f)))))
 
 
-!SLIDE
+!SLIDE transition=fade
 # SchemeScript
 
     @@@python
@@ -115,7 +115,7 @@ we'll deport your ass!
           (cons (f (car list))
             (map (cdr list) f)))))
 
-!SLIDE
+!SLIDE transition=fade
 # JavaScript
 
     @@@javascript
