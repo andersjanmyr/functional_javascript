@@ -159,6 +159,24 @@ say.call(frog, 'Hi');
     result = [app.next(), app.next(),
               app.reset()]
 
+!SLIDE small
+# Module with parameters
+
+    @@@javaScript
+    var app = (function(m1, m2) {
+
+        return {
+            doSomething: function() {
+                return m1.doNext();
+            },
+
+            doSomethingElse: function() {
+                return m2.doSomething();
+            }
+        };
+    })(module1, otherModule);	
+
+
 !SLIDE small execute
 # Class Function
 
