@@ -86,3 +86,7 @@ td:nth-child(3) {
 	font-size: 48px;
 }
 
+[src='/image/summary/NinaRasmusOredev.png'] {
+	float: right;
+	margin-top: -200px;
+}

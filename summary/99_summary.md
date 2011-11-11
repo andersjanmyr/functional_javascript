@@ -21,9 +21,9 @@
 
 * https://github.com/schacon/showoff
 
-!SLIDE
+!SLIDE 
+![Nina and Rasmus](NinaRasmusOredev.png)
 # Questions?
 ### anders.janmyr@jayway.com
 ### http://anders.janmyr.com
 ### @andersjanmyr
-
