@@ -13,18 +13,17 @@
 !SLIDE bullets small transition=curtainX
 # Code and Slides
 
-## Presentation and Code
+## Presentation
 
 * http://functional-javascript.heroku.com
-* https://github.com/andersjanmyr/functional_javascript
 
 ## Credits
 
 * https://github.com/schacon/showoff
 
-!SLIDE
+!SLIDE 
+![Nina and Rasmus](NinaRasmusOredev.png)
 # Questions?
 ### anders.janmyr@jayway.com
 ### http://anders.janmyr.com
 ### @andersjanmyr
-

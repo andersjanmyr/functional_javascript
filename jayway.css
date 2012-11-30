@@ -6,42 +6,53 @@ h1, h2 {
   color: rgb(79, 180, 226);
   font-family: Georgia;
 }
-.content::after {
+#logo {
   position: absolute;
-  right: 120px;
-  bottom: 120px;
-  width: 30px;
-  height: 30px;
-  content: url(images/jay_small.png);
+  right: 40px;
+  bottom: 40px;
+  width: 60px;
+  height: 60px;
+  z-index: 99;
 }
 
 th {
     font-size: 2em;
     text-align: left;
     background: darkgray;
-    padding: .5em;
+    padding-left: .5em;
 }
+th pre {
+    font-size: 2em;
+    text-align: left;
+}
+
 th:nth-child(3) {
     font-size: 1.2em;
 }
 
+tr {
+	padding: 0;
+}
 tr:nth-child(2n+1) {
     background: lightgray;
 }
 td {
-    padding: .4em;
+    padding: 0;
 }
 
 td pre {
   font-size: 36px;
+    padding: 0;
 }
 
 td:nth-child(1) {
     font-size: 2em;
+    padding: 0;
     padding-left: .4em;
 }
 td:nth-child(3) {
     font-size: 1.4em;
+    padding: 0;
     padding-left: .4em;
 }
 
@@ -70,4 +81,12 @@ td:nth-child(3) {
   margin-left: -2em;
 }
 
+.results {
+	color: white;
+	font-size: 48px;
+}
 
+[src='/image/summary/NinaRasmusOredev.png'] {
+	float: right;
+	margin-top: -200px;
+}

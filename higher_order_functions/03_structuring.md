@@ -1,3 +1,6 @@
+!SLIDE center transition=turnDown
+# What do you do when your Javascript code sucks?
+
 !SLIDE center transition=shuffle
 # Javascript Magic Variables
 
@@ -35,7 +38,7 @@ say.call(frog, 'Hi');
 </table>
 
 
-!SLIDE execute
+!SLIDE small execute
 # Magic variable `arguments`
 
     @@@javaScript
@@ -55,7 +58,7 @@ say.call(frog, 'Hi');
 ## Module Functions
 
 
-!SLIDE execute
+!SLIDE small execute
 # Namespace
 
     @@@javaScript
@@ -74,7 +77,7 @@ say.call(frog, 'Hi');
               app.reset()]
 
 
-!SLIDE execute
+!SLIDE small execute
 # Namespace with `this`
 
     @@@javaScript
@@ -95,7 +98,7 @@ say.call(frog, 'Hi');
 
 
 
-!SLIDE execute
+!SLIDE small execute
 # Namspace with Literals
     @@@javaScript
     var app = {
@@ -115,7 +118,7 @@ say.call(frog, 'Hi');
 
 
 
-!SLIDE execute
+!SLIDE small execute
 # Module
 
     @@@javaScript
@@ -136,7 +139,7 @@ say.call(frog, 'Hi');
     result = [app.next(), app.next(),
               app.reset()]
 
-!SLIDE execute
+!SLIDE small execute
 # Dynamic Module
 
     @@@javaScript
@@ -156,27 +159,25 @@ say.call(frog, 'Hi');
     result = [app.next(), app.next(),
               app.reset()]
 
-!SLIDE execute
-# Dynamic Module with `apply`
+!SLIDE small
+# Module with parameters
 
     @@@javaScript
-    var app = {};
-    (function() {
-        var id = 42;
+    var app = (function(m1, m2) {
 
-        this.next = function() {
-            return id++;
+        return {
+            doSomething: function() {
+                return m1.doNext();
+            },
+
+            doSomethingElse: function() {
+                return m2.doSomething();
+            }
         };
+    })(module1, otherModule);	
 
-        this.reset = function() {
-            return id = 0;
-        }
-    }).apply(app); // call would also work here
 
-    result = [app.next(), app.next(),
-              app.reset()]
-
-!SLIDE execute
+!SLIDE small execute
 # Class Function
 
     @@@javaScript

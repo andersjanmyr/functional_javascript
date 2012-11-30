@@ -21,7 +21,6 @@ I will show how to use functional programming techniques in Javascript and how
 these techniques can help you write readable, testable, and well organized code
 
 
-
 ### Keywords
 
 Javascript, functional programming, higher order functions

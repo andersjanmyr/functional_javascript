@@ -1,7 +1,7 @@
 !SLIDE center transition=toss
 # Higher Order Functions
 
-!SLIDE execute
+!SLIDE small execute
 # each
 
     @@@ javaScript
@@ -18,7 +18,7 @@
       result += " Item: " + i;
     });
 
-!SLIDE execute
+!SLIDE small execute
 # filter
 
     @@@ javaScript
@@ -40,7 +40,7 @@
     });
 
 
-!SLIDE execute
+!SLIDE small execute
 # map
 
     @@@ javaScript
@@ -62,7 +62,7 @@
 
 
 
-!SLIDE execute
+!SLIDE smaller execute
 # reduce
 
     @@@ javaScript
@@ -85,7 +85,7 @@
 
 
 
-!SLIDE execute
+!SLIDE small execute
 # sum
 
     @@@ javaScript
@@ -98,7 +98,7 @@
 
     result = sum([1,2,3,4]);
 
-!SLIDE execute
+!SLIDE small execute
 # join
 
     @@@ javaScript
@@ -114,7 +114,7 @@
 
     result = join([1,2,3,4], ':');
 
-!SLIDE execute
+!SLIDE small execute
 # any
 
     @@@javaScript
@@ -130,7 +130,7 @@
       any([1, 3, 6], even)
     ]
 
-!SLIDE execute
+!SLIDE small execute
 # all
 
     @@@javaScript
@@ -149,7 +149,7 @@
 
 
 
-!SLIDE execute
+!SLIDE smaller execute
 # zip
 
     @@@ javaScript
@@ -168,7 +168,7 @@
 
     result = zip([1,2,3], [9, 10, 11]);
 
-!SLIDE execute
+!SLIDE small execute
 # zip
 
     @@@ javaScript
@@ -187,7 +187,7 @@
 * Replaces a `call` with a `jump`
 
 
-!SLIDE execute
+!SLIDE small execute
 # factorial
     
     @@@ javaScript
@@ -201,7 +201,7 @@
     result = factorial(3);
 
 !SLIDE execute
-# factorial
+# factorial (tail recursive)
     
     @@@ javaScript
     function factorial(n) {
@@ -286,7 +286,7 @@ call factorial (3)
 
 
 
-!SLIDE execute
+!SLIDE smaller execute
 # Tail Recursion in Javascript 
 
     @@@ javaScript
